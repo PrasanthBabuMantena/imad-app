@@ -20,7 +20,7 @@ app.get('/article1',function(req,res){
     res.send("The article 1 is executed")
 });
 app.get('/article2',function(req,res){
-    res.send("<h1>Article 2 is executed")
+    res.send("<h1>Article 2 is executed</h1>")
 });
 
 // Do not change port, otherwise your app won't run on IMAD servers
