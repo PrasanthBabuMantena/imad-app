@@ -13,7 +13,7 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 app.get('/host',function(req,res) {
-    res.sendFile(path.join(__dirname,'ui','hostl.html'));
+    res.sendFile(path.join(__dirname,'ui','hstl.html'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
