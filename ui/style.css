@@ -5,7 +5,8 @@ body {
 }
 
 .center {
-    text-align: center;
+    hspace:200px;
+    vspace:400px;
 }
 
 .text-big {
