@@ -5,8 +5,7 @@ body {
 }
 
 .center {
-   top:50px;
-   right:40px;
+  text-align: center;
 }
 
 .text-big {
