@@ -1,10 +1,10 @@
 console.log('Loaded!');
 
 var button=document.getElementById("count");
-counter=0;
+var counte=0;
 button.onclick =function(){
 var span=getElementById("counter");
-    counter=counter+1;
+    counte=counte+1;
 
-    span.InnerHTML=counter.toString();
+    span.InnerHTML=counte.toString();
 };
