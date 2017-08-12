@@ -24,5 +24,6 @@ body {
     Text-align: center;
 }
 .container{
-    max-width:80px;
+    max-width:1000px;
+    margin:auto;
 }
