@@ -15,6 +15,11 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/host',function(req,res) {
     res.sendFile(path.join(__dirname,'ui','hstl.html'));
 });
+counter=0;
+app.get('/counter',function (req,res){
+    counter=counter+1;
+    res.send(counter.getString());
+});
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
