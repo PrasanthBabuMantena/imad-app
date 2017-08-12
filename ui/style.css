@@ -31,7 +31,7 @@ body {
     color:maroon;
 }
 .image{
-    position:absolute;
+    position:relative;
     max-height:20px;
     max-width:800px;
     
