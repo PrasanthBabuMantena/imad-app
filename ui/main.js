@@ -7,4 +7,4 @@ var span=getElementById("counter");
     counter=counter+1;
 
     span.InnerHTML=counter.toString();
-}
+};
