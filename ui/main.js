@@ -1,3 +1,5 @@
+console.log("loaded");
+window.alert("Welcome to ECE official");
 var button=document.getElementById('counter');
 var counter=0; 
 button.onclick = function () {
