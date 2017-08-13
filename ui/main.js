@@ -1,8 +1,13 @@
 console.log("loaded");
 window.alert("Welcome to ECE official");
 
+var req=new XMLHttpRequest();
+req.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter',true);
+var a=req.responseText;
+span.innerHTML=a.toString();
 
 var button=document.getElementById('like');
+
 button.onclick = function () 
 {
     var request=new XMLHttpRequest();
@@ -20,9 +25,7 @@ button.onclick = function ()
      
         
         request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter',true);
-        request.send(null);
-    
-
+        request.send();
    
 };
 
