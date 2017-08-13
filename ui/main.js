@@ -26,7 +26,7 @@ console.log("successfully loaded");
 //for search box
 var name=document.getElementById('nam');
 var button=document.getElementById('sub');
-var n=name.value;
+var n=nam.value;
 button.onclick = function () 
 {
     var request=new XMLHttpRequest();
