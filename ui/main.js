@@ -28,5 +28,13 @@ var name=document.getElementById('nam');
 var su=document.getElementById('sub');
 var n=name.value;
 su.onclick=function(){
-    name.value="ramu";
+   //make a request
+   //default trail
+   var name=["name1","name2","name3"];
+   var list='';
+   for(i=0;i<name.length;i++){
+       list+='<li>'+name[i]+'</li>';
+   }
+   var ul=document.getElementById('namelist');
+   ul.innerHTML=list;
 };
