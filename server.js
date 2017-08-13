@@ -23,9 +23,11 @@ app.get('/counter',function (req,res){
     counter=counter+1;
     res.send(counter.toString());
 });
-
-app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+var names=[];
+app.get('/submit-name/:name',function(){
+  var name=req.params.name;
+names.push(name);
+res.send(JSON.stringify(names));
 });
 app.get('/article2',function(req,res){
     res.send("<h1>Article 2 is executed</h1>");
