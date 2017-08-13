@@ -27,6 +27,7 @@ button.onclick = function ()
 
 console.log("successfully loaded");
 //for search box
+if(1){
 
 var button=document.getElementById('sub');
 var n=nam.value;
@@ -59,7 +60,9 @@ button.onclick = function ()
         request.send();
    
 };
-
+}
+else
+ dean();
 
 
 function dean() 
@@ -83,5 +86,5 @@ function dean()
    
 };
    
-   dean();
+  
 
