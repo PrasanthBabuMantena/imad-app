@@ -1,22 +1,4 @@
 console.log("loaded");
-var req=new XMLHttpRequest();
-req.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter',true);
- if(req.readyState===XMLHttpRequest.DONE)
-        {
-            if(req.status===200)
-            {
-                var counter=request.responseText;
-                var span=document.getElementById('count');
-                span.innerHTML=counter.toString();
-            }
-var span=document.getElementById('count');
-span.innerHTML=a.toString();
-
-}
-
-
-
-
 var button=document.getElementById('like');
 button.onclick = function () 
 {
