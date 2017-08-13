@@ -17,7 +17,8 @@ button.onclick = function () {
                 span.innerHTML=a.toString();
             
                 document.write(a.toString());
-            }document.write(a.toString());
+            }
+            document.write(a.toString());
             
         }
     };
