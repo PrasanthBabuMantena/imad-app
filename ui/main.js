@@ -24,7 +24,7 @@ button.onclick = function ()
 
 console.log("successfully loaded");
 //for search box
-var name=document.getElementById('nam');
+
 var button=document.getElementById('sub');
 var n=nam.value;
 button.onclick = function () 
@@ -47,9 +47,10 @@ button.onclick = function ()
             }
         }
 };
-     
+     var name=document.getElementById('nam');
+     n=nam.value;
         
-        request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/submit-name?='+n,true);
+        request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/submit-name?name='+n,true);
         request.send();
    
 };
