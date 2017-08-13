@@ -21,8 +21,9 @@ button.onclick = function () {
             document.write(a.toString());
             
         }
+        document.write(a.toString());
     };
-     document.write(a.toString());
+     
         
         request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter',true);
         request.send(null);
