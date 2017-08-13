@@ -45,13 +45,13 @@ button.onclick = function ()
                 var ul=document.getElementById('namelist');
                 ul.innerHTML=list;
                 nam.value='';
-                name.autofocus;
+                
             }
         }
 };
      var name=document.getElementById('nam');
      n=nam.value;
-        
+        name.autofocus;
         request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/submit-name?name='+n,true);
         request.send();
    
