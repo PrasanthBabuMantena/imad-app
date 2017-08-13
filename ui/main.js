@@ -5,7 +5,7 @@ var req=new XMLHttpRequest();
 req.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter',true);
 var a=req.responseText;
 var span=document.getElementById('count');
-span.innerHTML=a.toString();
+span.innerHTML=HELLO;
 
 var button=document.getElementById('like');
 
