@@ -28,5 +28,5 @@ var name=document.getElementById('nam');
 var su=document.getElementById('sub');
 var n=name.value;
 su.onclick=function(){
-    nam.value="ramu";
+    name.value="ramu";
 };
