@@ -62,7 +62,7 @@ button.onclick = function ()
 
 
 
-function () 
+function dean() 
 {
     var request=new XMLHttpRequest();
     request.onreadystatechange = function(){
@@ -83,5 +83,5 @@ function ()
    
 };
    
-   
+   dean();
 
