@@ -1,7 +1,8 @@
 console.log("loaded");
+var a=12;
 
 var span=document.getElementById('count');
-span.innerHTML=20.toString();
+span.innerHTML=a.toString();
 
 
 
