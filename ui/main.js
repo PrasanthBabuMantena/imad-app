@@ -70,7 +70,7 @@ function dean()
         {
             if(request.status===200)
             {
-                var counter=request.responseText-1;
+                var counter=request.responseText;
                 var span=document.getElementById('count');
                 span.innerHTML=counter.toString();
             }
@@ -79,7 +79,7 @@ function dean()
      
         
         request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter',true);
-        request.send();
+        request.send(null);
    
 };
    
