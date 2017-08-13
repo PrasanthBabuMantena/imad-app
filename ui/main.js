@@ -14,9 +14,11 @@ button.onclick = function () {
                 var a=request.responseText;
                 var span=document.getElementById('count');
                 span.innerHTML=a.toString();
+            
+                document.write(a);
             }
             
-        }
+        }document.write(a);
     };
         
         request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter',true);
@@ -25,6 +27,6 @@ button.onclick = function () {
 
     document.write(a);
 };
-document.write(a);
+
 
 console.log("successfully loaded");
