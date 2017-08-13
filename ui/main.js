@@ -23,3 +23,10 @@ button.onclick = function ()
 
 
 console.log("successfully loaded");
+//for search box
+var name=document.getElementById('nam');
+var su=document.getElementById('sub');
+var n=name.value;
+su.onclick=function(){
+    name.value=ramu;
+};
