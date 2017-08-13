@@ -8,6 +8,7 @@ button.onclick = function () {
     request.onreadystatechange = function(){
         if(request.readystate===XMLHttpRequest.DONE)
         {
+            var a=10;
            
             if(request.status===200)
             {
@@ -25,7 +26,7 @@ button.onclick = function () {
         request.send(null);
     
 
-    document.write(a);
+   
 };
 
 
