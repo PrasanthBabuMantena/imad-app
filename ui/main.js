@@ -51,7 +51,7 @@ button.onclick = function ()
 };
      var name=document.getElementById('nam');
      n=nam.value;
-        name.autofocus;
+        name.focus();
         request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/submit-name?name='+n,true);
         request.send();
    
