@@ -1,7 +1,7 @@
 console.log("loaded");
 
 var span=document.getElementById('count');
-span.innerHTML=HELLO;
+span.innerHTML=20.toString();
 
 
 
