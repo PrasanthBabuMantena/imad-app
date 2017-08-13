@@ -3,7 +3,7 @@ window.alert("Welcome to ECE official");
 
 var button=document.getElementById('like');
 button.onclick = function () {
-    var a=10; 
+    
     var request=new XMLHttpRequest();
     request.onreadystatechange = function(){
         if(request.readystate===XMLHttpRequest.DONE)
