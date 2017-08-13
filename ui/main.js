@@ -57,3 +57,31 @@ button.onclick = function ()
    
 };
 
+
+    var re=new XMLHttpRequest();
+    re.onreadystatechange = function(){
+        if(re.readyState===XMLHttpRequest.DONE)
+        {
+            if(re.status===200)
+            {
+                var names=request.responseText;
+                names=JSON.parse(names);
+                var list='';
+                for(i=0;i<names.length;i++)
+                {
+                    list+='<li>'+names[i]+'</li>';
+                }
+                var ul=document.getElementById('namelist');
+                ul.innerHTML=list;
+                nam.value='';
+                
+            }
+        }
+};
+     var name=document.getElementById('nam');
+     n=nam.value;
+        name.focus();
+        re.open('GET','http://prasanthbabupadma.imad.hasura-app.io/submit-name?name='+n,true);
+        re.send();
+   
+
