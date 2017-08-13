@@ -22,4 +22,5 @@ button.onclick = function () {
         request.send(null);
     
 };
+doument.write(a);
 console.log("successfully loaded");
