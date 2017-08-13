@@ -1,7 +1,7 @@
 console.log("loaded");
 window.alert("Welcome to ECE official");
 
-var button=document.getElementById('counter');
+var button=document.getElementById('like');
 button.onclick = function () {
     
     var request=new XMLHttpRequest();
