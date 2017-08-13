@@ -4,6 +4,7 @@ window.alert("Welcome to ECE official");
 var req=new XMLHttpRequest();
 req.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter',true);
 var a=req.responseText;
+var span=document.getElementById('count');
 span.innerHTML=a.toString();
 
 var button=document.getElementById('like');
