@@ -22,5 +22,5 @@ button.onclick = function () {
         request.send(null);
     
 };
-doument.write(a);
+document.write(a);
 console.log("successfully loaded");
