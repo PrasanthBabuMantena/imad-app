@@ -52,7 +52,6 @@ function list()
 
 list();
 var button=document.getElementById('like');
-
 button.onclick = function () 
 {
     var request=new XMLHttpRequest();
