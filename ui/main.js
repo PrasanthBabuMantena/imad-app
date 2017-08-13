@@ -38,3 +38,23 @@ su.onclick=function(){
    var ul=document.getElementById('namelist');
    ul.innerHTML=list;
 };
+var button=document.getElementById('sub');
+button.onclick = function () 
+{
+    var request=new XMLHttpRequest();
+    request.onreadystatechange = function(){
+        if(request.readyState===XMLHttpRequest.DONE)
+        {
+            if(request.status===200)
+            {
+                
+            }
+        }
+    };
+     
+        
+        request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter',true);
+        request.send();
+   
+};
+
