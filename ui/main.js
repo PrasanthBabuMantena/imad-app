@@ -20,7 +20,28 @@ function dean()
    
 };
 
+function list() 
+{
+    var request=new XMLHttpRequest();
+    request.onreadystatechange = function(){
+        if(request.readyState===XMLHttpRequest.DONE)
+        {
+            if(request.status===200)
+            {
+                var counter=request.responseText;
+                var span=document.getElementById('count');
+                span.innerHTML=counter.toString();
+            }
+        }
+    };
+     
+        
+        request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter',true);
+        request.send();
+   
+};
 
+list();
 var button=document.getElementById('like');
 button.onclick = function () 
 {
@@ -46,10 +67,9 @@ button.onclick = function ()
 
 console.log("successfully loaded");
 //for search box
-if(1){
-
 var button=document.getElementById('sub');
 var n=nam.value;
+
 button.onclick = function () 
 {
     var request=new XMLHttpRequest();
