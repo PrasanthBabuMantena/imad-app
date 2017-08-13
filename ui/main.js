@@ -28,21 +28,31 @@ function list()
         {
             if(request.status===200)
             {
-                var counter=request.responseText;
-                var span=document.getElementById('count');
-                span.innerHTML=counter.toString();
+                var names=request.responseText;
+                names=JSON.parse(names);
+                var list='';
+                for(i=0;i<names.length;i++)
+                {
+                    list+='<li>'+names[i]+'</li>';
+                }
+                var ul=document.getElementById('namelist');
+                ul.innerHTML=list;
+                nam.value='';
+                
             }
         }
-    };
-     
-        
-        request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter',true);
+};
+     var name=document.getElementById('nam');
+     n=nam.value;
+        name.focus();
+        request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/submit-name?name='+n,true);
         request.send();
    
 };
 
 list();
 var button=document.getElementById('like');
+
 button.onclick = function () 
 {
     var request=new XMLHttpRequest();
@@ -63,6 +73,7 @@ button.onclick = function ()
         request.send();
    
 };
+Dean();
 
 
 console.log("successfully loaded");
@@ -99,9 +110,6 @@ button.onclick = function ()
         request.send();
    
 };
-}
-else
- dean();
 
 
 
