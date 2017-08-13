@@ -25,5 +25,6 @@ button.onclick = function () {
 
     document.write(a);
 };
+document.write(a);
 
 console.log("successfully loaded");
