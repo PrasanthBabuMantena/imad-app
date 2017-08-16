@@ -23,10 +23,10 @@ function createTemplate(data){
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
-    var Template =  '
+    var Template =  `
       <html>
     <title>${title}</title>
-    <link href="/ui/style.css" rel="stylesheet">
+        <link href="/ui/style.css" rel="stylesheet">
     <body>
     <div class="container">
         <div>
@@ -38,9 +38,9 @@ function createTemplate(data){
             ${content}
             </div>
         </div>
-    </body>
-      </html>'
-      ;
+         </body>
+          </html>
+       `;
       return template;
 }
 
