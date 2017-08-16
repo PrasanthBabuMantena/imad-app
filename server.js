@@ -17,6 +17,29 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+function createTemplate(data){
+    var title=data.title;
+    var id = data.id;
+    var date=data.date;
+    var heading=data.heading;
+    var template =  "
+    <html>
+    <title>${title}</title>
+    <link href="/ui/style.css" rel="stylesheet">
+    <div class="container">
+        <div>
+         <a href="/" >Home</a>
+            <h1>${heading}</h1>
+            ${date}
+            </div>
+            <div>
+            ${content}
+            </div>
+        </div>
+      </html>";
+      return template;
+}
+
 
 
 
