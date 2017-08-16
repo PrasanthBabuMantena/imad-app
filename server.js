@@ -59,7 +59,7 @@ app.get('/test/:art',function(req,res){
          res.status(404).send('article not found');
      }
     else{
-    res.send(createTemplate(result.rows));
+    res.send(createTemplate(result.rows[0]));
     }
         
     });
