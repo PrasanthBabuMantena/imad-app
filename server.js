@@ -22,10 +22,12 @@ function createTemplate(data){
     var id = data.id;
     var date=data.date;
     var heading=data.heading;
-    var template =  "
-    <html>
+    var content=data.content;
+    var Template =  '
+      <html>
     <title>${title}</title>
     <link href="/ui/style.css" rel="stylesheet">
+    <body>
     <div class="container">
         <div>
          <a href="/" >Home</a>
@@ -36,7 +38,9 @@ function createTemplate(data){
             ${content}
             </div>
         </div>
-      </html>";
+    </body>
+      </html>'
+      ;
       return template;
 }
 
@@ -46,13 +50,13 @@ function createTemplate(data){
 var pool=new Pool(config);
 app.get('/test',function(req,res){
    //make a request 
-   pool.query('SELECT * FROM RAMA',function(err,result){
+   pool.query('SELECT * FROM article',function(err,result){
     if(err)
     {
         res.status(500).send(err.toString());
     }
     else{
-    res.send(JSON.stringify(result.rows));
+    res.send(createTemplate(result.rows[0]));
     }
         
     });
