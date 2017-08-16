@@ -32,7 +32,7 @@ function createTemplate(data){
         <div>
          <a href="/" >Home</a>
             <h1>${heading}</h1>
-            ${date.toString()}
+            ${date.toDateString()}
             </div>
             <div>
             ${content}
