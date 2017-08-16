@@ -16,6 +16,10 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+
+
+
+
 var pool=new Pool(config);
 app.get('/test',function(req,res){
    //make a request 
@@ -25,7 +29,7 @@ app.get('/test',function(req,res){
         res.status(500).send(err.toString());
     }
     else
-    res.send(JSON.toString(result.rows));
+    res.send(JSON.stringify(result.rows));
    });
    
    
