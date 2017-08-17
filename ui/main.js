@@ -87,6 +87,7 @@ button.onclick = function ()
         request.send();
    
 };
+console.log("loaded");
 
 
 
