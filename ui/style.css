@@ -1,8 +1,7 @@
 body {
     font-family: sans-serif;
     background-color: lightgrey;
-    
-background-image:url("http://oldtractortinshed.net/wp-content/uploads/2012/04/lake-eyre017.jpg");
+    background-image:url("http://oldtractortinshed.net/wp-content/uploads/2012/04/lake-eyre017.jpg");
     
 }
 
@@ -27,7 +26,7 @@ background-image:url("http://oldtractortinshed.net/wp-content/uploads/2012/04/la
     Text-align: center;
 }
 .container{
-    margin-top:1000px;
+    margin-top:10px;
     max-width:1000px;
     font-family:san-serif;
     
