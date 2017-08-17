@@ -20,7 +20,7 @@ function dean()
    
 };
 
-function list() 
+function list() {
             if(request.status===200)
             {
                 var names=request.responseText;
