@@ -9,13 +9,13 @@ function dean()
             {
                 var counter=request.responseText;
                 var span=document.getElementById('count');
-                span.innerHTML=counter.toString()-1;
+                span.innerHTML=counter.toString();
             }
         }
     };
      
         
-        request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter',true);
+        request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter/load',true);
         request.send(null);
    
 }
