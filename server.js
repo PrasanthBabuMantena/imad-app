@@ -9,7 +9,8 @@ function hash(input,salt){
     return hash.toString('hex');
     
 }
-
+var app = express();
+app.use(morgan('combined'));
 
 
 app.get('/hash/:input',function(req,res){
@@ -26,8 +27,7 @@ var config={
      password:process.env.DB_PASSWORD
 };
 
-var app = express();
-app.use(morgan('combined'));
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
