@@ -94,7 +94,9 @@ app.get('/counter',function (req,res){
 var names=[];
 app.get('/submit-name',function(req,res){
   var name=req.query.name;
-  if(name!=null)
+  if(name === null)
+names=names;
+else
 names.push(name);
 //JSON IS jAVA SCRIPT OBJECT NOTATION
 res.send(JSON.stringify(names));
