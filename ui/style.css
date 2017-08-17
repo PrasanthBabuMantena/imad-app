@@ -25,11 +25,11 @@ body {
     Text-align: center;
 }
 .container{
-    
+    margin-top:75px;
     max-width:1000px;
     font-family:san-serif;
     
-    margin:auto;
+   
     color:black;
 }
 .image{
