@@ -18,7 +18,7 @@ function dean()
         request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter',true);
         request.send(null);
    
-};
+}
 
 function list() {
      var request=new XMLHttpRequest();
@@ -47,7 +47,7 @@ function list() {
         request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/submit-name?name='+n,true);
         request.send();
    
-};
+}
 
 list();
 var button=document.getElementById('like');
