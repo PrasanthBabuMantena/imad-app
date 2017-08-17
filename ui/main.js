@@ -19,6 +19,7 @@ function dean()
         request.send(null);
    
 }
+dean();
 
 function list() {
      var request=new XMLHttpRequest();
