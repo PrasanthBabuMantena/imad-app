@@ -2,6 +2,22 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
+var crypto=require('crypto');
+
+function hash(input,salt){
+    var hash=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
+    return hash.toString('hex');
+    
+}
+
+
+
+app.get('/hash/:input',function(req,res){
+   //hash the input
+   var hashedString=hash(req.params.input,'this-is-a-salt')
+   res.send(hashedString);
+});
+
 var config={
     user:'prasanthbabupadma',
     host:'db.imad.hasura-app.io',
