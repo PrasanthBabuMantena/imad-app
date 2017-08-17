@@ -15,7 +15,7 @@ function dean()
     };
      
         
-        request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter/load',true);
+        request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/counter',true);
         request.send(null);
    
 }
