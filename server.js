@@ -89,6 +89,10 @@ app.get('/counter',function (req,res){
     counter=counter+1;
     res.send(counter.toString());
 });
+app.get('/counter/load',function(req,res){
+res.send(counter.toString());
+});
+    
 
 
 var names=[];
