@@ -49,6 +49,40 @@ app.post('/create-user',function(req,res){
     
 });
 
+app.post('/login',function(req,res){
+  var username=req.body.username;
+  var password=req.body.password;
+  
+  pool.query("SELECT *FROM myuser where username=$1",[username],function(err,result){
+     if(err)
+     res.status(500).send(err.toString());
+     else if(result.rows.length===0)
+     {
+         res.status(400).send("User not found");
+     }
+     else
+     {
+         var dbstring=result.rows[0].password;
+         var salt=dbstring.split('$')[2];
+         var hashedString=hash(password,salt);
+         if(hashedString===dbstring){
+             res.send("You are successfully logged in");
+         }
+         else 
+         res.status(403).send("Incorrect credentials");
+         
+     }
+    
+  });
+
+    
+    
+});
+
+
+
+
+
 
 
 app.get('/', function (req, res) {
