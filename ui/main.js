@@ -142,6 +142,7 @@ request.onreadystatechange = function(){
     console.log(password);
     
     request.open('POST','http://prasanthbabupadma.imad.hasura-app.io/login',true);
+    request.setaHeader('Content-type','application/json');
     request.send(JSON.stringify({usename:username,password:password}));
 
 };
