@@ -6,7 +6,7 @@ var crypto=require('crypto');
 
 function hash(input,salt){
     var hash=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
-    return ['pbkdf2','salt','1000',hash.toString('hex').join('$')];
+    return ['pbkdf2','salt','1000',hash.toString('hex')].join('$');
     
 }
 var app = express();
