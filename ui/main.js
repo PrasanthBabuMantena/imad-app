@@ -114,7 +114,8 @@ console.log("loaded");
 
 
 var login=document.getElementById('l1');
-login.onclick=new XMLHttpRequest();
+login.onclick=function(){
+var request=new XMLHttpRequest();
 request.onreadystatechange = function(){
     if(request.readystate===XMLHttpRequest.DONE)
     {
@@ -132,6 +133,7 @@ request.onreadystatechange = function(){
             
         }
     }
+};
     var s=document.getElementById('username');
     var username=s.value;
     console.log(username);
@@ -142,5 +144,5 @@ request.onreadystatechange = function(){
     req.open('POST','http://prasanthbabupadma.imad.hasura-app.io/login',true);
     req.send(JSON.stringify({usename:username,password:password}));
 
-}
+};
 
