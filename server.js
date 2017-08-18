@@ -14,6 +14,14 @@ var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
 
+var config={
+    user:'prasanthbabupadma',
+    host:'db.imad.hasura-app.io',
+    database:'prasanthbabupadma',
+    port:'5432',
+     password:process.env.DB_PASSWORD
+};
+
 
 app.get('/hash/:input',function(req,res){
    //hash the input
@@ -39,14 +47,6 @@ app.post('/create-user',function(req,res){
    
     
 });
-
-var config={
-    user:'prasanthbabupadma',
-    host:'db.imad.hasura-app.io',
-    database:'prasanthbabupadma',
-    port:'5432',
-     password:process.env.DB_PASSWORD
-};
 
 
 
