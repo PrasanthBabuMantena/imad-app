@@ -141,8 +141,8 @@ request.onreadystatechange = function(){
     var password=p.value;
     console.log(password);
     
-    req.open('POST','http://prasanthbabupadma.imad.hasura-app.io/login',true);
-    req.send(JSON.stringify({usename:username,password:password}));
+    request.open('POST','http://prasanthbabupadma.imad.hasura-app.io/login',true);
+    request.send(JSON.stringify({usename:username,password:password}));
 
 };
 
