@@ -1,10 +1,4 @@
 console.log("loaded");
-var n;
-function space(n){
-   for(i=0;i<n;i++){
-    document.write("&nbsp");
-   }
-}
 function dean() 
 {
     var request=new XMLHttpRequest();
@@ -119,6 +113,34 @@ console.log("loaded");
 
 
 
-   
-  
+var login=document.getElementById('l1');
+login.onclick=new XMLHttpRequest();
+request.onreadystatechange = function(){
+    if(request.readystate===XMLHttpRequest.DONE)
+    {
+        if(request.status===200)
+        {
+            alert("You are loggedin successfully");
+        }
+        else if(request.status===403)
+        {
+            alert("Incorrect credentials");
+        }
+        else if(request.status===400)
+        {
+            alert("User not found");
+            
+        }
+    }
+    var s=document.getElementById('username');
+    var username=s.value;
+    console.log(username);
+    var p=document.getElementById('password');
+    var password=p.value;
+    console.log(password);
+    
+    req.open('POST','http://prasanthbabupadma.imad.hasura-app.io/login',true);
+    req.send(JSON.stringify({usename:username,password:password}));
+
+}
 
