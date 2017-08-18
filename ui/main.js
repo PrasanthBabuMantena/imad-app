@@ -1,4 +1,10 @@
 console.log("loaded");
+var n;
+function space(n){
+   for(i=0;i<n;i++){
+    document.write("&nbsp");
+   }
+}
 function dean() 
 {
     var request=new XMLHttpRequest();
