@@ -22,7 +22,7 @@ but.onclick=function(){
     }
    };
     var username=document.getElementById('username').value;
-    username.focus();
+   
 
     console.log(username);
     var password=document.getElementById('password').value;
