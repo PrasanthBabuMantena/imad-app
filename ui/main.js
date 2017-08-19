@@ -14,7 +14,7 @@ but.onclick=function(){
         {
             alert("Incorrect credentials");
         }
-        else if(request.status===400)
+        else if(request.status===500)
         {
             alert("User not found");
             
