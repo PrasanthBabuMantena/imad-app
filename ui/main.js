@@ -30,7 +30,7 @@ but.onclick=function(){
     
     request.open('POST','http://prasanthbabupadma.imad.hasura-app.io/create-user',true);
     request.setRequestHeader('Content-Type','application/json');
-    request.send(JSON.stringify({'usename':'username','password':'password'}));
+    request.send(JSON.stringify('{"username":"prasanth","password":"krishna"}'));
 
 };
 
