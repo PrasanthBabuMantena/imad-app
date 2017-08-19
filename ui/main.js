@@ -29,13 +29,15 @@ but.onclick=function(){
     console.log(password);
     if(username.length===0)
     {
-        username.focus();
+        
         alert('pls enter username');
+        username.focus();
     
     }
     else if(password.length===0){
-         password.focus();
+        
         alert('Please enter password');
+         password.focus();
         
     }
    
