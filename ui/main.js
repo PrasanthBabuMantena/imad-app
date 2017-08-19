@@ -30,12 +30,12 @@ but.onclick=function(){
     if(username.length===0)
     {
         alert('pls enter username');
-    username.focus();
-    }
+    
+    }username.focus();
     else if(password.length===0){
         alert('Please enter password');
-        password.focus();
-    }
+        
+    }password.focus();
     else{
     
     request.open('POST','http://prasanthbabupadma.imad.hasura-app.io/create-user',true);
