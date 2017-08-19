@@ -31,6 +31,7 @@ but.onclick=function(){
     {
         
         alert('pls enter username');
+        username.value='hello';
         username.focus();
     
     }
