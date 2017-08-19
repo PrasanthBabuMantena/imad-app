@@ -90,10 +90,10 @@ app.post('/login',function(req,res){
 app.get('/checklogin',function(req,res){
    if(req.session&& req.session.auth&& req.session.auth.userId)
    {
-       documeent.write("You are logged in");
+       res.send("You are logged in");
    }
    else{
-   document.write("you are not logged in");
+   res.send("you are not logged in");
    }
 });
 
