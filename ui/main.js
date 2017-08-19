@@ -8,6 +8,41 @@ but.onclick=function(){
     {
         if(request.status===200)
         {
+            alert(request.responseText.toString());
+        }
+        else if(request.status===403)
+        {
+            alert("Incorrect credentials");
+        }
+        else if(request.status===400)
+        {
+            alert("User not found");
+            
+        }
+    }
+   };
+    var username=document.getElementById('username').value;
+
+    console.log(username);
+    var password=document.getElementById('password').value;
+    
+    console.log(password);
+    
+    request.open('POST','http://prasanthbabupadma.imad.hasura-app.io/create-user',true);
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({"username":username,"password":password}));
+
+};
+
+
+var but=document.getElementById('l1');
+but.onclick=function(){
+    var request=new XMLHttpRequest();
+    request.onreadystatechange = function(){
+    if(request.readyState===XMLHttpRequest.DONE)
+    {
+        if(request.status===200)
+        {
             alert("You are loggedin successfully");
         }
         else if(request.status===403)
