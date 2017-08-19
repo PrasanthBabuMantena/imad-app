@@ -4,7 +4,7 @@ var but=document.getElementById('s1');
 but.onclick=function(){
     var request=new XMLHttpRequest();
     request.onreadystatechange = function(){
-    if(request.readystate===XMLHttpRequest.DONE)
+    if(request.readyState===XMLHttpRequest.DONE)
     {
         if(request.status===200)
         {
@@ -20,7 +20,7 @@ but.onclick=function(){
             
         }
     }
-};
+   };
     var username=document.getElementById('username').value;
 
     console.log(username);
