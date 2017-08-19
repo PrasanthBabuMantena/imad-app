@@ -113,10 +113,10 @@ console.log("loaded");
 
 
 
-var login=document.getElementById('l1');
-login.onclick=function(){
-var request=new XMLHttpRequest();
-request.onreadystatechange = function(){
+var but=document.getElementById('l1');
+but.onclick=function(){
+    var request=new XMLHttpRequest();
+                  request.onreadystatechange = function(){
     if(request.readystate===XMLHttpRequest.DONE)
     {
         if(request.status===200)
