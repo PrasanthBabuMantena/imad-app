@@ -27,11 +27,21 @@ but.onclick=function(){
     var password=document.getElementById('password').value;
     
     console.log(password);
+    if(username.length===0)
+    {
+        alert('pls enter username');
+    username.focus();
+    }
+    else if(password.length===0){
+        alert('Please enter password');
+        password.focus();
+    }
+    else{
     
     request.open('POST','http://prasanthbabupadma.imad.hasura-app.io/create-user',true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({"username":username,"password":password}));
-
+  }
 };
 
 
