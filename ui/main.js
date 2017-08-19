@@ -54,6 +54,9 @@ but.onclick=function(){
             alert("User not found");
             
         }
+        else if(request.status(500)){
+         alert("user already exista...so please fing a new username")   
+        }
     }
    };
     var username=document.getElementById('username').value;
