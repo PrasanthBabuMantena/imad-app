@@ -22,6 +22,7 @@ but.onclick=function(){
     }
    };
     var username=document.getElementById('username').value;
+    username.focus();
 
     console.log(username);
     var password=document.getElementById('password').value;
@@ -31,8 +32,8 @@ but.onclick=function(){
     {
         
         alert('pls enter username');
-        username.value='hello';
-        username.focus();
+       
+        
     
     }
     else if(password.length===0){
