@@ -26,7 +26,7 @@ but.onclick=function(){
 
     console.log(username);
     var password=document.getElementById('password').value;
-     username.focus();
+     
     
     console.log(password);
     if(username.length===0)
