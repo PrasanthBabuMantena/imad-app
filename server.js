@@ -4,6 +4,7 @@ var path = require('path');
 var Pool=require('pg').Pool;
 var crypto=require('crypto');
 var bodyParser=require('body-parser');
+var session=require('express-session');
 
 function hash(input,salt){
     var hash=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
@@ -13,6 +14,11 @@ function hash(input,salt){
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    secret:'some random string',
+    cookie:{maxAge:1000*60}
+    
+}));
 
 var config={
     user:'prasanthbabupadma',
@@ -66,6 +72,9 @@ app.post('/login',function(req,res){
          var salt=dbstring.split('$')[2];
          var hashedString=hash(password,salt);
          if(hashedString===dbstring){
+             //create a session
+             req.session.auth={userId: result.rows[0].id};
+             
              res.send("You are successfully logged in");
          }
          else 
@@ -77,6 +86,15 @@ app.post('/login',function(req,res){
 
     
     
+});
+app.get('/checklogin',function(req,res){
+   if(req.session&& req.session.auth&& req.session.auth.userId)
+   {
+       documeent.write("You are logged in");
+   }
+   else{
+   document.write("you are not logged in");
+   }
 });
 
 
