@@ -42,7 +42,7 @@ app.post('/create-user',function(req,res){
        }
        else 
        {
-           res.status(200).send(username+"successfully created");
+           res.send(username+"successfully created");
        }
    });
    
