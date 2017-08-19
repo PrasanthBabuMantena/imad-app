@@ -97,6 +97,11 @@ app.get('/checklogin',function(req,res){
    }
 });
 
+app.get('/logout',function(req,res){
+   delete res.session.auth;
+    
+});
+
 
 
 
