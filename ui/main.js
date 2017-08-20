@@ -2,28 +2,7 @@ console.log("loaded");
 
 
 
-var but=document.getElementById('sub1');
-but.onclick=function(){
-var request=new XMLHttpRequest();
-request.onreadystatechange=function(){
 
-if(request.readyState===XMLHttpRequest.DONE)
-     {
-if(request.status===200)
-     {
-   var li=request.responseText;
-li=JSON.parse(li);
-var t1=document.getElementById('t1');
-t1.innerHTML=li;
-
-
-    }
-   }
-};
-var trno=document.getElementById('trno').value;
-    request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/schedule?trno='+trno,true);
-        request.send(null);
-};
 
 
 
@@ -244,3 +223,25 @@ console.log("loaded");
 
 
 
+var but=document.getElementById('sub1');
+but.onclick=function(){
+var request=new XMLHttpRequest();
+request.onreadystatechange=function(){
+
+if(request.readyState===XMLHttpRequest.DONE)
+     {
+if(request.status===200)
+     {
+   var li=request.responseText;
+li=JSON.parse(li);
+var t1=document.getElementById('t1');
+t1.innerHTML=li;
+
+
+    }
+   }
+};
+var trno=document.getElementById('trno').value;
+    request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/schedule?trno='+trno,true);
+        request.send(null);
+};
