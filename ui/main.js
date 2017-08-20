@@ -232,8 +232,9 @@ if(request.readyState===XMLHttpRequest.DONE)
      {
          if(request.status===400)
          {
-              
-             alert("Train data not available");
+              li="Train data not found";
+             var d=document.getElementById('s');
+             d.innerHTML=li;
             
          }
 if(request.status===200)
