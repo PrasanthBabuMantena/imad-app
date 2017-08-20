@@ -63,7 +63,10 @@ app.post('/login',function(req,res){
   pool.query('SELECT * FROM "myuser" where username=$1',[username],function(err,result){
      if(err)
      res.status(500).send(err.toString());
-     
+     else if(result.rows.length===0)
+     {
+         res.status(400).send("User not found");
+     }
      else
      {
          var dbstring=result.rows[0].password;
@@ -106,13 +109,9 @@ var pool=new Pool('config');
 app.get('/schedule',function(req,res){
 var trno=req.query.trno;
 console.log(trno);
-pool.query("Select * from 'schedule' where trno=$1",[trno],function(result,err){
+pool.query("Select * from 'schedule' where trno=$1",[trno],function(err,result){
 if(err)
 res.status(500).send("Something went wrong");
-     else if(result.rows.length===0)
-     {
-         res.status(400).send("User not found");
-     }
      else{
 var li=['<tr><th>Station</th><th>Arrival Time</th><th>Departure Time</th></tr>'];
 var n=result.rows.length;
