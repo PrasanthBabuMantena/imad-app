@@ -2,7 +2,7 @@ console.log("loaded");
 
 
 
-var but=document.getElementById('sub');
+var but=document.getElementById('sub1');
 but.onclick=function(){
 request.onreadystatechange=function(){
 var request=new XMLHttpRequest();
@@ -19,7 +19,7 @@ t1.innerHTML=li;
 
 
     }
-    }
+   }
 };
 var button=document.getElementById('trno');
 var trno=trno.value;
