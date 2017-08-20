@@ -1,5 +1,35 @@
 console.log("loaded");
 
+
+
+var but=document.getElementById('sub');
+but.onclick=function(){
+request.onreadystatechange=function(){
+var request=new XMLHttpRequest();
+if(request.readyState===XMLHttpRequest.DONE)
+     {
+if(request.status===200)
+     {
+   var li=request.responseText;
+li=JSON.parse(li);
+
+
+
+    }
+    }
+};
+var button=document.getElementById('trno');
+var trno=trno.value;
+request.open('GET',' ','true');
+request.send(null);
+};
+
+
+
+
+
+
+
 var but=document.getElementById('s1');
 but.onclick=function(){
     var request=new XMLHttpRequest();
