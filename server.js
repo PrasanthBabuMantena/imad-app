@@ -63,10 +63,7 @@ app.post('/login',function(req,res){
   pool.query('SELECT * FROM "myuser" where username=$1',[username],function(err,result){
      if(err)
      res.status(500).send(err.toString());
-     else if(result.rows.length===0)
-     {
-         res.status(400).send("User not found");
-     }
+     
      else
      {
          var dbstring=result.rows[0].password;
