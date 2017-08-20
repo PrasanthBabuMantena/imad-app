@@ -22,8 +22,8 @@ t1.innerHTML=li;
    }
 };
 var trno=document.getElementById('trno').value;
-request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/schedule?trno='+trno,true);
-request.send();
+    request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/schedule?trno='+trno,true);
+        request.send();
 };
 
 
