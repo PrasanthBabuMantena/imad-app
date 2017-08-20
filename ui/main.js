@@ -235,7 +235,7 @@ if(request.readyState===XMLHttpRequest.DONE)
               li="Train data not found";
              var d=document.getElementById('s');
              d.innerHTML=li;
-            
+            trno.value='';
          }
 if(request.status===200)
      {
@@ -248,8 +248,8 @@ t1.innerHTML=li;
     }
    }
 };
-var trno=document.getElementById('trno').value;
-trno.value='';
-    request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/schedule?trno='+trno,true);
+var trn=document.getElementById('trno').value;
+
+    request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/schedule?trno='+trn,true);
         request.send(null);
 };
