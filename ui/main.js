@@ -245,7 +245,7 @@ li=JSON.parse(li);
 var t1=document.getElementById('t1');
 t1.innerHTML=li;
  var d=document.getElementById('s');
-             d.innerHTML=li;
+             d.innerHTML='';
 
 
     }
