@@ -232,7 +232,7 @@ if(request.readyState===XMLHttpRequest.DONE)
      {
          if(request.status===400)
          {
-              li="Train data not found";
+              li="<font color=RED>Train data not found</font>";
              var d=document.getElementById('s');
              d.innerHTML=li;
             trno.value='';
