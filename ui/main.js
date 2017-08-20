@@ -12,8 +12,8 @@ if(request.status===200)
      {
    var li=request.responseText;
 li=JSON.parse(li);
-var t1=document.getElemnentById('t1');
-t1.innerHEML=li;
+var t1=document.getElementById('t1');
+t1.innerHTML=li;
 
 
 
