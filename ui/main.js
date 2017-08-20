@@ -237,7 +237,7 @@ if(request.readyState===XMLHttpRequest.DONE)
              d.innerHTML=li;
             trno.value='';
            var t1=document.getElementById('t1');
-t1.innerHTML=li;
+t1.innerHTML='';
          }
 if(request.status===200)
      {
