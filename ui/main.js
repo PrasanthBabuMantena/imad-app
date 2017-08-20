@@ -12,6 +12,9 @@ if(request.status===200)
      {
    var li=request.responseText;
 li=JSON.parse(li);
+var t1=document.getElemnentById('t1');
+t1.innerHEML=li;
+
 
 
 
@@ -20,7 +23,7 @@ li=JSON.parse(li);
 };
 var button=document.getElementById('trno');
 var trno=trno.value;
-request.open('GET',' ','true');
+request.open('GET','http://prasanthbabupadma.imad.hasura-app.io/schedule?trno='+trno,'true');
 request.send(null);
 };
 
