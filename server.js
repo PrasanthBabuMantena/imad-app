@@ -16,7 +16,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(session({
     secret:`somerandomvalue`,
-    cookie:{maxAge:1000*60}
+    cookie:{maxAge:1000*60*60}
     
 }));
 
@@ -40,7 +40,7 @@ res.status(500).send("Something went wrong");
       }
 else{
 var li=['<tr><th>Station</th><th>Arrival Time</th><th>Departure Time</th></tr>'];
-n=result.rows.length();
+n=result.rows.count;
 console.log(n);
 for(i=0;i<n;i++)
    {
