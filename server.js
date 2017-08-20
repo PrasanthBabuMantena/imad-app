@@ -38,7 +38,11 @@ if(err)
      {
 res.status(500).send("Something went wrong");
       }
-else{
+     else if(result.rows.length!==0)
+     {
+         res.status(400).send("User not found");
+     }
+     else{
 var li=['<tr><th>Station</th><th>Arrival Time</th><th>Departure Time</th></tr>'];
 var n=result.rows.count;
 console.log(n);
