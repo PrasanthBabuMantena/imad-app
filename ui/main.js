@@ -232,10 +232,10 @@ if(request.readyState===XMLHttpRequest.DONE)
      {
          if(request.status===400)
          {
-              trno.value='';
+              
              alert("Train data not available");
             
-         }
+         }trno.value='';
 if(request.status===200)
      {
    var li=request.responseText;
