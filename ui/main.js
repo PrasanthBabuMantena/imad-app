@@ -236,7 +236,8 @@ if(request.readyState===XMLHttpRequest.DONE)
              var d=document.getElementById('s');
              d.innerHTML=li;
             trno.value='';
-            t1.innerHTML='';
+           var t1=document.getElementById('t1');
+t1.innerHTML=li;
          }
 if(request.status===200)
      {
