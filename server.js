@@ -42,8 +42,8 @@ var li='<tr><th>Station</th><th>Arrival Time</th><th>Departure Time</th></tr>';
 for(i=0;i<result.rows.length;i++)
    {
 li+='<tr>'+'<td>'+result.rows[i].station+'</td><td>'+result.rows[i].tarrival+'</td><td>'+result.rows[i].tdeparture+'</td></tr>';
+}
 res.send(JSON.stringify(li));
-   }
   }
 });
 
