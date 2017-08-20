@@ -43,6 +43,7 @@ for(i=0;i<result.rows.length;i++)
    {
 li.push('<tr>'+'<td>'+result.rows[i].station+'</td><td>'+result.rows[i].tarrival+'</td><td>'+result.rows[i].tdeparture+'</td></tr>');
 }
+console.log('reached server');
 res.send(JSON.stringify(li));
   }
 });
