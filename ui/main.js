@@ -230,6 +230,11 @@ request.onreadystatechange=function(){
 
 if(request.readyState===XMLHttpRequest.DONE)
      {
+         if(request.status===400)
+         {
+             alert("Train data not available");
+             trno.value='';
+         }
 if(request.status===200)
      {
    var li=request.responseText;
