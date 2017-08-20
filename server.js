@@ -32,16 +32,16 @@ var config={
 var pool=new Pool('config');
 app.get('/schedule',function(req,res){
 var trno=req.query.trno;
-pool.query('Select * from schedule     ',[trno],function(result,err){
+pool.query('Select * from schedule where trno=$1',[trno],function(result,err){
 if(err)
      {
 result.status(502).send("Something went wrong");
       }
 else{
-var li='<tr><th>Station</th><th>Arrival Time</th><th>Departure Time</th></tr>';
+var li=['<tr><th>Station</th><th>Arrival Time</th><th>Departure Time</th></tr>'];
 for(i=0;i<result.rows.length;i++)
    {
-li+='<tr>'+'<td>'+result.rows[i].station+'</td><td>'+result.rows[i].tarrival+'</td><td>'+result.rows[i].tdeparture+'</td></tr>';
+li.push('<tr>'+'<td>'+result.rows[i].station+'</td><td>'+result.rows[i].tarrival+'</td><td>'+result.rows[i].tdeparture+'</td></tr>');
 }
 res.send(JSON.stringify(li));
   }
