@@ -105,6 +105,32 @@ app.get('/logout',function(req,res){
 });
 
 
+var pool=new Pool('config');
+app.get('/schedule',function(req,res){
+var trno=req.query.trno;
+console.log(trno);
+pool.query("Select * from 'schedule' where trno=$1",[trno],function(result,err){
+if(err)
+res.status(500).send("Something went wrong");
+     else if(result.rows.length===0)
+     {
+         res.status(400).send("User not found");
+     }
+     else{
+var li=['<tr><th>Station</th><th>Arrival Time</th><th>Departure Time</th></tr>'];
+var n=result.rows.length;
+console.log(n);
+for(i=0;i<n;i++)
+   {
+li.push('<tr>'+'<td>'+result.rows[i].station+'</td><td>'+result.rows[i].tarrival+'</td><td>'+result.rows[i].tdeparture+'</td></tr>');
+}
+console.log('reached server');
+res.send(JSON.stringify(li));
+  }
+});
+
+});
+
 
 
 
