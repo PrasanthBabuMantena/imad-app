@@ -114,7 +114,7 @@ if(err)
 res.status(500).send("Something went wrong");
  else if(result.rows.length===0)
      {
-         res.status(400).send("User not found");
+         res.status(400).send("train not available");
      }
      else{
 var li=['<tr><th>Station</th><th>Arrival Time</th><th>Departure Time</th></tr>'];
