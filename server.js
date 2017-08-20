@@ -35,7 +35,7 @@ var trno=req.query.trno;
 pool.query('Select * from schedule where trno=$1',[trno],function(result,err){
 if(err)
      {
-result.status(500).send("Something went wrong");
+res.status(500).send("Something went wrong");
       }
 else{
 var li=['<tr><th>Station</th><th>Arrival Time</th><th>Departure Time</th></tr>'];
