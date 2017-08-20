@@ -30,9 +30,9 @@ var config={
 
 
 var pool=new Pool('config');
-app.get('/shedule',function(req,res){
+app.get('/schedule',function(req,res){
 var trno=req.query.trno;
-pool.query('    ',[trno],function(result,err){
+pool.query('Select * from schedule     ',[trno],function(result,err){
 if(err)
      {
 result.status(500).send("Something went wrong");
@@ -41,7 +41,7 @@ else{
 var li='<tr><th>Station</th><th>Arrival Time</th><th>Departure Time</th></tr>';
 for(i=0;i<result.rows.length;i++)
    {
-li+='<tr><td>result.rows[i].station</td><td>result.rows[i].tarrival</td><td>result.rows[i].tdeparture</td></tr>';
+li+='<tr>'+'<td>'+result.rows[i].station+'</td><td>'+result.rows[i].tarrival+'</td><td>'+result.rows[i].tdeparture+'</td></tr>';
 res.send(JSON.stringify(li));
    }
   }
