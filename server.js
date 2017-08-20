@@ -40,7 +40,9 @@ res.status(500).send("Something went wrong");
       }
 else{
 var li=['<tr><th>Station</th><th>Arrival Time</th><th>Departure Time</th></tr>'];
-for(i=0;i<result.rows.length;i++)
+n=result.rows.length;
+console.log(n);
+for(i=0;i<n;i++)
    {
 li.push('<tr>'+'<td>'+result.rows[i].station+'</td><td>'+result.rows[i].tarrival+'</td><td>'+result.rows[i].tdeparture+'</td></tr>');
 }
