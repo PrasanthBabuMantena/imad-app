@@ -33,7 +33,7 @@ var pool=new Pool('config');
 app.get('/schedule',function(req,res){
 var trno=req.query.trno;
 console.log(trno);
-pool.query('Select * from "schedule" where trno=$1',[trno],function(result,err){
+pool.query("Select * from 'schedule' where trno=$1",[trno],function(result,err){
 if(err)
      {
 res.status(500).send("Something went wrong");
