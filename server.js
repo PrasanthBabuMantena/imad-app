@@ -76,7 +76,7 @@ app.post('/login',function(req,res){
              //create a session
              req.session.auth={userId: result.rows[0].id};
              
-             res.send("You are successfully logged in");
+             res.send(JSON.stringify("You are successfully logged in"));
          }
          else 
          res.status(403).send("Incorrect credentials");
